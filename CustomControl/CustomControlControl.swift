@@ -29,8 +29,8 @@ struct CustomControlControl: ControlWidget {
                 }
             )
         }
-        .displayName("Timer")
-        .description("A an example control that runs a timer.")
+        .displayName("kaikaiWidget")
+        .description("kaikaiのwidgetだよ")
     }
 }
 
