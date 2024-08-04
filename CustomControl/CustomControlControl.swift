@@ -22,7 +22,10 @@ struct CustomControlControl: ControlWidget {
                 isOn: value,
                 action: StartTimerIntent(),
                 valueLabel: { isRunning in
-                    Label(isRunning ? "On" : "Off", systemImage: "timer")
+                    Label(
+                        isRunning ? "On" : "Off",
+                        systemImage: "cloud.bolt.fill" // コントロールセンターで表示する際の画像を指定
+                    )
                 }
             )
         }
