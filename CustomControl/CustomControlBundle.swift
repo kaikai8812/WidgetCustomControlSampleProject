@@ -11,7 +11,6 @@ import SwiftUI
 @main
 struct CustomControlBundle: WidgetBundle {
     var body: some Widget {
-        CustomControl()
         CustomControlControl()
     }
 }
