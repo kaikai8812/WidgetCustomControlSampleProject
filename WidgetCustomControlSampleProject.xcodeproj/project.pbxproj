@@ -18,6 +18,8 @@
 		EB45572B2C5F501100C00FBA /* CustomControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB45572A2C5F501100C00FBA /* CustomControl.swift */; };
 		EB45572D2C5F501200C00FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB45572C2C5F501200C00FBA /* Assets.xcassets */; };
 		EB4557312C5F501200C00FBA /* CustomControlExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = EB45571F2C5F501100C00FBA /* CustomControlExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EBD7CBC82C5F6A84007397C8 /* ToggleValueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7CBC72C5F6A79007397C8 /* ToggleValueManager.swift */; };
+		EBD7CBCB2C5F6E00007397C8 /* ToggleValueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD7CBC72C5F6A79007397C8 /* ToggleValueManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,7 @@
 		EB45572A2C5F501100C00FBA /* CustomControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomControl.swift; sourceTree = "<group>"; };
 		EB45572C2C5F501200C00FBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB45572E2C5F501200C00FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBD7CBC72C5F6A79007397C8 /* ToggleValueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleValueManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 		EB45570B2C5F4E9500C00FBA /* WidgetCustomControlSampleProject */ = {
 			isa = PBXGroup;
 			children = (
+				EBD7CBC72C5F6A79007397C8 /* ToggleValueManager.swift */,
 				EB45570C2C5F4E9500C00FBA /* WidgetCustomControlSampleProjectApp.swift */,
 				EB45570E2C5F4E9500C00FBA /* ContentView.swift */,
 				EB4557102C5F4E9600C00FBA /* Assets.xcassets */,
@@ -242,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBD7CBC82C5F6A84007397C8 /* ToggleValueManager.swift in Sources */,
 				EB45570F2C5F4E9500C00FBA /* ContentView.swift in Sources */,
 				EB45570D2C5F4E9500C00FBA /* WidgetCustomControlSampleProjectApp.swift in Sources */,
 			);
@@ -252,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB4557292C5F501100C00FBA /* CustomControlControl.swift in Sources */,
+				EBD7CBCB2C5F6E00007397C8 /* ToggleValueManager.swift in Sources */,
 				EB45572B2C5F501100C00FBA /* CustomControl.swift in Sources */,
 				EB4557272C5F501100C00FBA /* CustomControlBundle.swift in Sources */,
 			);
