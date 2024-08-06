@@ -9,26 +9,28 @@ import AppIntents
 import SwiftUI
 import WidgetKit
 
+// コントロールウィジェットの構成は、ControlWidgetに準拠した構造体で行う
 struct CustomControlControl: ControlWidget {
     static let kind: String = "kaikai.WidgetCustomControlSampleProject.CustomControl"
 
     var body: some ControlWidgetConfiguration {
         StaticControlConfiguration(
             kind: Self.kind,
-            provider: Provider()
-        ) { value in
-            ControlWidgetToggle(
-                "Start Timer",
-                isOn: value,
-                action: StartTimerIntent(),
-                valueLabel: { isRunning in
-                    Label(
-                        isRunning ? "On" : "Off",
-                        systemImage: "cloud.bolt.fill" // コントロールセンターで表示する際の画像を指定
-                    )
-                }
-            )
-        }
+            provider: Provider(),
+            content: { value in
+                ControlWidgetToggle(
+                    "Start Timer",
+                    isOn: value,
+                    action: StartTimerIntent(),
+                    valueLabel: { isOn in
+                        Label(
+                            isOn ? "On" : "Off",
+                            systemImage: isOn ? "cloud.bolt.fill" :  "square.and.arrow.up"
+                        )
+                    }
+                )
+            }
+        )
         .displayName("kaikaiWidget")
         .description("kaikaiのwidgetだよ")
     }
@@ -37,16 +39,17 @@ struct CustomControlControl: ControlWidget {
 extension CustomControlControl {
     struct Provider: ControlValueProvider {
         var previewValue: Bool {
-            false
+            true
         }
 
         func currentValue() async throws -> Bool {
-            let isRunning = true // Check if the timer is running
-            return isRunning
+            let isOn = false // Check if the timer is running
+            return isOn
         }
     }
 }
 
+/// AppIntent
 struct StartTimerIntent: SetValueIntent {
     static var title: LocalizedStringResource { "Start a timer" }
 
